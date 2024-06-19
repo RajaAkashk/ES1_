@@ -105,3 +105,69 @@ else if(marks2 > marks1 && marks2 > marks3){
 else{
    console.log(student3,', scored the highest marks:', marks3)
 }
+
+
+console.log("Answer 1:");
+function calculateSalary(hoursWorked, hourlyRate) {
+  let totalSalary = hourlyRate * hoursWorked;
+  return totalSalary;
+}
+console.log("Total Salary:", calculateSalary(40, 500));
+
+console.log('\n')
+console.log("Answer 2:");
+function calculateBonus(workedHours, marks, salary) {
+  if (workedHours > 25 && marks > 85) {
+    let bonus = salary * 0.1;
+    let salarywithBonus = bonus + salary;
+    return salarywithBonus;
+  }
+  else if (workedHours > 15 && marks > 75) {
+      let bonus = salary * 0.05;
+      let salarywithBonus = bonus + salary;
+      return salarywithBonus;
+    }else{
+    return salary;
+    }
+}
+console.log(calculateBonus(20, 80, 5000));
+
+
+console.log('\n')
+console.log("Answer 3:");
+
+function calculateFinalAmount(price1,quantity1,price2,quantity2){
+  let priceOfQuantity1 = price1 * quantity1;
+  let priceOfQuantity2 = price2 * quantity2;
+  let totalPrice = priceOfQuantity1 + priceOfQuantity2;
+  return totalPrice;
+}
+console.log(calculateFinalAmount(200, 10, 500, 5));
+
+
+console.log('\n')
+console.log("Answer 4:");
+function calculateAllowance(age,isStudent,baseAllowance){
+  if(age < 18 && isStudent === true){
+    return baseAllowance = baseAllowance + 100;
+  } else if(age > 18 && age < 25 && isStudent === true){
+      return baseAllowance = baseAllowance + 50;
+    }else{
+    return baseAllowance
+    }
+}
+console.log(calculateAllowance(16,true,500))
+
+console.log('\n')
+console.log("Answer 5:");
+function calculateShippingCost (totalWeight,country,baseCost){
+  if(totalWeight<1 && country === 'Local'){
+    return baseCost = baseCost + 10;
+  }
+  else if(totalWeight>1 && country === 'International'){
+      return baseCost = baseCost + 20;
+    }else{
+    return baseCost;
+    }
+}
+console.log(calculateShippingCost(0.5,"Local",50))

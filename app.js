@@ -171,3 +171,62 @@ function calculateShippingCost (totalWeight,country,baseCost){
     }
 }
 console.log(calculateShippingCost(0.5,"Local",50))
+
+
+
+
+const car ={
+  brand:'Toyota',
+  model:'Camery'
+}
+
+console.log('1.1', car.brand)
+console.log('1.2', car.model)
+
+console.log('1.3', car.brand = 'Honda')
+console.log('1.4', car)
+
+car.year = 2022;
+car.color = 'Blue';
+console.log('1.5', car)
+
+console.log('1.6')
+for(let val in car){
+  console.log(val,':',car[val])
+}
+
+const citizen ={
+  name:'Ramesh Kumar',
+  age:62,
+  occupation:'Retired'
+}
+citizen.age = 68;
+console.log('\n')
+console.log('2.1: Updated age:', citizen.age)
+
+citizen.age += 2 ;
+console.log('2.2: Updated age after addding 2:', citizen.age)
+
+citizen.city = "Delhi"
+console.log('2.3: Properties of the',"'",'citizen',"'",'object')
+for(let val in citizen){
+  console.log(val, ':', citizen[val])
+}
+
+
+const person ={
+  name:'Ram',
+  age: '65'
+}
+person.bp = "Normal"
+
+console.log('\n')
+console.log('3.1: bp:', person.bp)
+
+console.log('\n')
+console.log('3.2:')
+if(person.bp ==="Normal" && person.age > 60){
+  console.log("Fit to travel.")
+}else{
+   console.log("Not fit to travel.")
+}
